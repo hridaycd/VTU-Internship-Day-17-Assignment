@@ -1,0 +1,100 @@
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Default font-family via External CSS */
+}
+
+/* External CSS: Body background color */
+body {
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* External CSS: Layout spacing (margin / padding) */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* External CSS: All <p> elements */
+p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Grouping Selector */
+h1, h2, h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* External CSS: All <h2> elements */
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+/* Cascading Order Step 1: Define h1 color in external CSS */
+h1 {
+    color: blue; /* This will be overridden by internal CSS, which is overridden by inline CSS */
+    text-align: center;
+}
+
+/* Class Selectors */
+.highlight {
+    background-color: #ffeaa7;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+/* Element + Class Selector */
+p.highlight {
+    font-weight: bold;
+    color: #d35400;
+}
+
+.center {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    /* Border around faculty cards */
+    border: 1px solid #ddd;
+}
+
+/* ID Selector */
+#contact {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+#contact a {
+    color: #3498db;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #7f8c8d;
+}

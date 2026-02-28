@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science & Engineering</title>
+    
+    <!-- ✅ A. External CSS (Compulsory) -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- ✅ B. Internal CSS -->
+    <style>
+        /* Cascading Order Step 2: Redefine h1 color in internal CSS.
+           This overrides the external CSS 'blue', but will be overridden by inline CSS. */
+        h1 {
+            color: green; 
+        }
+
+        /* Styling for a special section (Achievements box) & Add border styling to a section */
+        .achievements-box {
+            background-color: #e8f8f5;
+            border: 2px dashed #1abc9c;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .achievements-box h2 {
+            color: #16a085;
+            border-bottom-color: #16a085;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Container for layout -->
+    <div class="container">
+        
+        <!-- ✅ C. Inline CSS: One important heading 
+             Cascading Order Step 3: Inline CSS on <h1>. 
+             This has the highest priority and overrides both external and internal CSS. -->
+        <h1 style="color: red; text-transform: uppercase;">
+            Computer Science & Engineering
+        </h1>
+        <!-- 
+            Cascading Order Demonstration Comments:
+            1. External CSS sets h1 to blue. (Browser default would be standard black, but external CSS overrides it).
+            2. Internal CSS sets h1 to green. (Higher priority than external because it's defined lower in the head/after the link).
+            3. Inline CSS sets h1 to red.
+            Result: The heading is RED because Inline styles have the highest specificity/priority.
+        -->
+
+        <!-- ✅ C. Inline CSS: One urgent announcement -->
+        <div style="background-color: #e74c3c; color: white; padding: 10px; text-align: center; font-weight: bold; border-radius: 5px; margin-bottom: 20px;">
+            🚨 Admissions Open 2026 - Apply Now!
+        </div>
+
+        <section id="about">
+            <h2>About the Department</h2>
+            <p>Established in 2005, offering UG and PG programs. We strive to provide world-class education and foster innovation.</p>
+            
+            <!-- ✅ C. Inline CSS: One highlighted paragraph -->
+            <p style="background-color: yellow; padding: 10px; border-left: 4px solid orange;">
+                <strong>Vision:</strong> Empowering students to become global technology leaders and innovators.
+            </p>
+        </section>
+
+        <section id="courses">
+            <h2>Courses Offered</h2>
+            <ul>
+                <li>Data Structures</li>
+                <li>Web Technologies</li>
+                <li>Artificial Intelligence</li>
+                <li>Machine Learning</li>
+            </ul>
+        </section>
+
+        <section id="faculty">
+            <h2>Faculty Highlights</h2>
+            <!-- Using Classes: .card for reusable styling -->
+            <div class="card">
+                <h3>Dr. A. Kumar</h3>
+                <p>Professor - Specialization in Artificial Intelligence</p>
+            </div>
+            <div class="card">
+                <h3>Ms. B. Rao</h3>
+                <p>Assistant Professor - Specialization in Web Technologies</p>
+            </div>
+        </section>
+
+        <!-- Special Section with Internal CSS -->
+        <section class="achievements-box">
+            <h2>Achievements</h2>
+            <ul>
+                <li>100% placement in 2025</li>
+                <li>5 University Rank Holders</li>
+            </ul>
+            <!-- Using p.highlight selector -->
+            <p class="highlight">Our students continuously strive for excellence!</p>
+        </section>
+
+        <!-- ID Selector styling (#contact) -->
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <p>Email: <a href="mailto:cse@college.edu">cse@college.edu</a></p>
+            
+            <!-- Using .center and .highlight classes together -->
+            <span class="highlight center" style="display: inline-block; margin-top: 10px; color: black;">Reach out for inquiries</span>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Computer Science & Engineering Department. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
